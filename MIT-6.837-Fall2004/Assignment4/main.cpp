@@ -94,8 +94,6 @@ void render() {
     
     for (int i = 0; i < width; i++) {
         for (int j = 0; j < height; j++) {
-//    for (int i = 21; i < 22; i++) {
-//        for (int j = 23; j < 24; j++) {
             Vec2f point((float)(i+0.5)/width, (float)(j+0.5)/height);
             Ray ray = camera->generateRay(point);
             Hit hit;
@@ -131,7 +129,6 @@ void traceRay(float x, float y) {
     Camera *camera = sp->getCamera();
     RayTracer rt(sp, max_bounces, cutoff_weight, shadows, transparent_shadows);
     Vec2f point(x, y);
-//    Vec2f point((float)(96+0.5)/width, (float)(87+0.5)/height);
     Ray ray = camera->generateRay(point);
     Hit hit;
     Vec3f color = rt.traceRay(ray, camera->getTMin(), 0, cutoff_weight, 1.0, hit);
@@ -139,7 +136,6 @@ void traceRay(float x, float y) {
 
 int main(int argc, char * argv[]) {
 
-    // -input scene2_05_inside_sphere.txt -size 200 200 -output output2_05.tga -depth 9 11 depth2_05.tga -normals normals2_05.tga -shade_back
     parseCommand(argc, argv);
     sp = new SceneParser(input_file);
 

@@ -80,6 +80,7 @@ Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
                         }
                     }
                     // ignore the situation that the light in inside the transparent object
+                    // the following code has problems
 //                    if (t1 > t2 && t2 != -1 && ) {
 //                        cout << "b" << endl;
 //                        t2 = distanceToLight;

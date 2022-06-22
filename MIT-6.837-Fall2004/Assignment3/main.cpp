@@ -128,7 +128,6 @@ void render() {
 
 int main(int argc, char * argv[]) {
 
-    // -input scene2_05_inside_sphere.txt -size 200 200 -output output2_05.tga -depth 9 11 depth2_05.tga -normals normals2_05.tga -shade_back
     parseCommand(argc, argv);
     sp = new SceneParser(input_file);
 
