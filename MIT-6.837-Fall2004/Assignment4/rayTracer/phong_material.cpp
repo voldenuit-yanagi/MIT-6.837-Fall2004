@@ -83,8 +83,13 @@ void PhongMaterial::glSetMaterial(void) const {
 Vec3f PhongMaterial::Shade(const Ray &ray, const Hit &hit, const Vec3f &dirToLight, const Vec3f &lightColor) const {
     Vec3f normal = hit.getNormal();
     float dot = ray.getDirection().Dot3(normal);
-    if (shade_back && dot > 0) {
-        normal = normal * (-1.0f);
+    if (dot > 0) {
+        if (shade_back) {
+            normal = normal * (-1.0f);
+        }
+        else {
+            return Vec3f(0, 0, 0);
+        }
     }
     
     float nl = max(normal.Dot3(dirToLight), (float)0);

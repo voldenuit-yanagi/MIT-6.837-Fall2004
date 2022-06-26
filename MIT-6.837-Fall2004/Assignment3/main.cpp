@@ -89,17 +89,22 @@ void render() {
                 Vec3f color = sp->getAmbientLight() * hit.getMaterial()->getDiffuseColor();
                 Vec3f normal = hit.getNormal();
                 float dot = ray.getDirection().Dot3(normal);
-                if (shade_back && dot > 0) {
-                    normal = normal * (-1.0f);
-                    hit.set(hit.getT(), hit.getMaterial(), normal, ray);
+                if (dot > 0 && !shade_back) {
+                    color = Vec3f(0, 0, 0);
                 }
-                for (int k=0; k<sp->getNumLights(); k++) {
-                    Light *light = sp->getLight(k);
-                    Vec3f p = hit.getIntersectionPoint();
-                    Vec3f directionToLight, lightColor;
-                    float distanceToLight;
-                    light -> getIllumination(p, directionToLight, lightColor, distanceToLight);
-                    color += hit.getMaterial()->Shade(ray, hit, directionToLight, lightColor);
+                else {
+                    if (dot > 0 && shade_back) {
+                        normal = normal * (-1.0f);
+                        hit.set(hit.getT(), hit.getMaterial(), normal, ray);
+                    }
+                    for (int k=0; k<sp->getNumLights(); k++) {
+                        Light *light = sp->getLight(k);
+                        Vec3f p = hit.getIntersectionPoint();
+                        Vec3f directionToLight, lightColor;
+                        float distanceToLight;
+                        light -> getIllumination(p, directionToLight, lightColor, distanceToLight);
+                        color += hit.getMaterial()->Shade(ray, hit, directionToLight, lightColor);
+                    }
                 }
                 
                 output_img.SetPixel(i, j, color);
