@@ -19,6 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		310C52F728743EAA00B4D1E2 /* Assignment5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment5; sourceTree = "<group>"; };
 		3134CF3D2863058600E97843 /* MIT-6.837-Fall2004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MIT-6.837-Fall2004"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3134CF4D2863095F00E97843 /* Assignment0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment0; sourceTree = "<group>"; };
 		3134CF4E2863096B00E97843 /* Assignment1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment1; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		3134CF3F2863058600E97843 /* MIT-6.837-Fall2004 */ = {
 			isa = PBXGroup;
 			children = (
+				310C52F728743EAA00B4D1E2 /* Assignment5 */,
 				3134CF512863099000E97843 /* Assignment4 */,
 				3134CF502863098600E97843 /* Assignment3 */,
 				3134CF4F2863097900E97843 /* Assignment2 */,
