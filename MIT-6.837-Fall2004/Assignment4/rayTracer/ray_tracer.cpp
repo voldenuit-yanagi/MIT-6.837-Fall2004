@@ -19,7 +19,6 @@ Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
     }
     
     Vec3f color;
-    Group *items = sp->getGroup();
     if (items -> intersect(ray, hit, tmin)) {
         if (bounces == 0) {
             RayTree::SetMainSegment(ray, 0, hit.getT());
