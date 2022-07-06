@@ -14,7 +14,7 @@ void calculateMask(float distTraveled, const Hit &shadowHit, Vec3f &mask) {
 
 Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
                           float indexOfRefraction, Hit &hit) const {
-    if (bounces > max_bounces) {
+    if (bounces > max_bounces or weight < cutoff_weight) {
         return Vec3f(0, 0, 0);
     }
     
@@ -98,7 +98,7 @@ Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
         if (reflectiveColor.Length() > 0) {
             Ray reflectiveRay(p, mirrorDirection(normal, ray.getDirection()));
             Hit reflectiveHit;
-            color += traceRay(reflectiveRay, EPSILON, bounces+1, weight, hit.getMaterial()->getIndexOfRefraction(), reflectiveHit) * reflectiveColor;
+            color += traceRay(reflectiveRay, EPSILON, bounces+1, weight*reflectiveColor.Length(), hit.getMaterial()->getIndexOfRefraction(), reflectiveHit) * reflectiveColor;
             RayTree::AddReflectedSegment(reflectiveRay, 0, reflectiveHit.getT());
         }
         
@@ -119,12 +119,10 @@ Vec3f RayTracer::traceRay(Ray &ray, float tmin, int bounces, float weight,
                 Ray transmittedRay(p, transmittedDir);
                 Hit transmittedHit;
                 if (shade_back && inside) {
-//                    color += traceRay(transmittedRay, EPSILON, bounces + 1, weight, 1.0, transmittedHit) * transparentColor * weight;
-                    color += traceRay(transmittedRay, EPSILON, bounces + 1, weight, 1.0, transmittedHit) * transparentColor;
+                    color += traceRay(transmittedRay, EPSILON, bounces + 1, weight*transparentColor.Length(), 1.0, transmittedHit) * transparentColor;
                 }
                 else {
-//                    color += traceRay(transmittedRay, EPSILON, bounces + 1, weight, hit.getMaterial()->getIndexOfRefraction(), transmittedHit) * transparentColor * weight;
-                    color += traceRay(transmittedRay, EPSILON, bounces + 1, weight, hit.getMaterial()->getIndexOfRefraction(), transmittedHit) * transparentColor;
+                    color += traceRay(transmittedRay, EPSILON, bounces + 1, weight*transparentColor.Length(), hit.getMaterial()->getIndexOfRefraction(), transmittedHit) * transparentColor;
                 }
                 RayTree::AddTransmittedSegment(transmittedRay, 0, transmittedHit.getT());
             }

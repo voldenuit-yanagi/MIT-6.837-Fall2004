@@ -98,7 +98,7 @@ void render() {
             Ray ray = camera->generateRay(point);
             Hit hit;
             RayTracer rt(sp, max_bounces, cutoff_weight, shadows, transparent_shadows);
-            Vec3f color = rt.traceRay(ray, camera->getTMin(), 0, cutoff_weight, 1.0, hit);
+            Vec3f color = rt.traceRay(ray, camera->getTMin(), 0, 1.0, 1.0, hit);
             
             output_img.SetPixel(i, j, color);
             
@@ -131,7 +131,7 @@ void traceRay(float x, float y) {
     Vec2f point(x, y);
     Ray ray = camera->generateRay(point);
     Hit hit;
-    Vec3f color = rt.traceRay(ray, camera->getTMin(), 0, cutoff_weight, 1.0, hit);
+    Vec3f color = rt.traceRay(ray, camera->getTMin(), 0, 1.0, 1.0, hit);
 }
 
 int main(int argc, char * argv[]) {
