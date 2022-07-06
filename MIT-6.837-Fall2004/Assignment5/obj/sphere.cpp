@@ -100,24 +100,36 @@ void Sphere::paint(void) {
 }
 
 void Sphere::insertIntoGrid(Grid *g, Matrix *m) {
-    float halfDiagonal = g->getUnitCell().Length()/2;
-    for (int i = 0; i < g->get_nx(); i++) {
-        for (int j = 0; j < g->get_ny(); j++) {
-            for (int k = 0; k < g->get_nz(); k++) {
-                Vec3f sphereCenter = center;
-                float R = radius;
-                if (m) {
-                    m->Transform(sphereCenter);
-                    Vec3f vec[3] = {Vec3f(1, 0, 0), Vec3f(0, 1, 0), Vec3f(0, 0, 1)};
-                    m->TransformDirection(vec[0]);
-                    m->TransformDirection(vec[1]);
-                    m->TransformDirection(vec[2]);
-                    R *= min({vec[0].Length(), vec[1].Length(), vec[2].Length()});
-                }
-                Vec3f voxelCenter = g->getVoxelCenter(i, j, k);
-                if ((voxelCenter-sphereCenter).Length() - halfDiagonal < R) {
-                    g->addRecord(i, j, k, this);
-                }
+    BoundingBox *newBox = nullptr;
+    if (m) {
+        Vec3f vec[2];
+        vec[0] = box->getMin();
+        vec[1] = box->getMax();
+        for (int i = 1; i <= 8; i++)
+        {
+            Vec3f v = Vec3f(vec[i & 1].x(), vec[(i >> 1) & 1].y(), vec[(i >> 2) & 1].z());
+            m->Transform(v);
+            if (newBox)
+                newBox->Extend(v);
+            else
+                newBox = new BoundingBox(v, v);
+        }
+    }
+    else {
+        newBox = box;
+    }
+    
+    Vec3f gridMin = g->getBoundingBox()->getMin();
+    Vec3f cell = g->getUnitCell();
+    Vec3f triMin = newBox->getMin() - gridMin;
+    Vec3f triMax = newBox->getMax() - gridMin;
+    triMin.Divide(cell.x(), cell.y(), cell.z());
+    triMax.Divide(cell.x(), cell.y(), cell.z());
+    
+    for (int i=max(0.f, floorf(floorf(triMin.x())==triMin.x() ? triMin.x()-1 : triMin.x())); i<min(1.f*g->get_nx(), ceilf(ceilf(triMax.x())==triMax.x() ? triMax.x()+1 : triMax.x())); i++) {
+        for (int j=max(0.f, floorf(floorf(triMin.y())==triMin.y() ? triMin.y()-1 : triMin.y())); j<min(1.f*g->get_ny(), ceilf(ceilf(triMax.y())==triMax.y() ? triMax.y()+1 : triMax.y())); j++) {
+            for (int k=max(0.f, floorf(floorf(triMin.z())==triMin.z() ? triMin.z()-1 : triMin.z())); k<min(1.f*g->get_nz(), ceilf(ceilf(triMax.z())==triMax.z() ? triMax.z()+1 : triMax.z())); k++) {
+                g->addRecord(i, j, k, this);
             }
         }
     }
