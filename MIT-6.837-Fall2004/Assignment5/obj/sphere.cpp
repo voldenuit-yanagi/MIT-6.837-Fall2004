@@ -100,18 +100,22 @@ void Sphere::paint(void) {
 }
 
 void Sphere::insertIntoGrid(Grid *g, Matrix *m) {
-    if (m) {
-        m->Inverse(*m, 0.001);
-    }
-    float halfDiagonal = g->getVoxelHalfDiagonalLength();
+    float halfDiagonal = g->getUnitCell().Length()/2;
     for (int i = 0; i < g->get_nx(); i++) {
         for (int j = 0; j < g->get_ny(); j++) {
             for (int k = 0; k < g->get_nz(); k++) {
-                Vec3f voxelCenter = g->getVoxelCenter(i, j, k);
+                Vec3f sphereCenter = center;
+                float R = radius;
                 if (m) {
-                    m->Transform(voxelCenter);
+                    m->Transform(sphereCenter);
+                    Vec3f vec[3] = {Vec3f(1, 0, 0), Vec3f(0, 1, 0), Vec3f(0, 0, 1)};
+                    m->TransformDirection(vec[0]);
+                    m->TransformDirection(vec[1]);
+                    m->TransformDirection(vec[2]);
+                    R *= min({vec[0].Length(), vec[1].Length(), vec[2].Length()});
                 }
-                if ((voxelCenter-center).Length() - halfDiagonal < radius) {
+                Vec3f voxelCenter = g->getVoxelCenter(i, j, k);
+                if ((voxelCenter-sphereCenter).Length() - halfDiagonal < R) {
                     g->addRecord(i, j, k, this);
                 }
             }

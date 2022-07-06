@@ -68,7 +68,6 @@ private:
     Object3DVector *record;
     Object3DVector plane_record;
     Vec3f unit_cell;
-    float halfDiagonalLength;
     Vec3f point_offset[8] = {Vec3f(0.5, 0.5, -0.5), Vec3f(0.5, 0.5, 0.5),
                              Vec3f(0.5, -0.5, 0.5), Vec3f(0.5, -0.5, -0.5),
                              Vec3f(-0.5, 0.5, -0.5), Vec3f(-0.5, 0.5, 0.5),
@@ -84,7 +83,6 @@ public:
         record = new Object3DVector [nx*ny*nz]();
         unit_cell = box->getMax() - box->getMin();
         unit_cell.Divide(nx, ny, nz);
-        halfDiagonalLength = unit_cell.Length() / 2;
         for (int i=0; i<8; i++) {
             point_offset[i] = point_offset[i] * unit_cell;
         }
@@ -111,7 +109,6 @@ public:
     int get_ny() { return ny; }
     int get_nz() { return nz; }
     Vec3f getVoxelCenter(int i, int j, int k);
-    float getVoxelHalfDiagonalLength() { return halfDiagonalLength; }
     Vec3f getUnitCell() { return unit_cell; }
     
     void addRecord(int i, int j, int k, Object3D *o);
