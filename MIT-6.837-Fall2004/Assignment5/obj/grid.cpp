@@ -112,12 +112,12 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const 
     float tzmax = max(t1.z()/direction.z(), t2.z()/direction.z());
     
     float minArr[] = {txmin, tymin, tzmin};
-    int maxIndex = findMaximumIndex(minArr, 3);
+    int maxIndex_minArr = findMaximumIndex(minArr, 3);
     float maxArr[] = {txmax, tymax, tzmax};
-    int minIndex = findMinimumIndex(maxArr, 3);
+    int minIndex_maxArr = findMinimumIndex(maxArr, 3);
     
-    float tnear = minArr[maxIndex];
-    float tfar = maxArr[minIndex];
+    float tnear = minArr[maxIndex_minArr];
+    float tfar = maxArr[minIndex_maxArr];
     
     if (tnear < tfar and tfar > tmin) {
         mi.sign_x = direction.x() > 0 ? 1: -1;
@@ -132,12 +132,12 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const 
         int index;
         if (tnear > tmin) {
             mi.tMin = tnear;
-            index = maxIndex;
+            index = maxIndex_minArr;
             outside = true;
         }
         else {
-            mi.tMin = tfar;
-            index = minIndex;
+            mi.tMin = tmin;
+            index = minIndex_maxArr;
         }
         
         Vec3f relativePosition = r.pointAtParameter(mi.tMin) - boxMin;
