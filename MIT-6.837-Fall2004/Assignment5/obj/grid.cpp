@@ -128,12 +128,10 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const 
         mi.d_ty = unit_cell.y() * mi.sign_y / direction.y();
         mi.d_tz = unit_cell.z() * mi.sign_z / direction.z();
         
-        bool outside = false;
         int index;
         if (tnear > tmin) {
             mi.tMin = tnear;
             index = maxIndex_minArr;
-            outside = true;
         }
         else {
             mi.tMin = tmin;
@@ -148,10 +146,11 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const 
         mi.k = relativePosition.z() / unit_cell.z();
         mi.k = mi.k==nz ? nz-1 : mi.k;
         
+        mi.t_next_x = mi.sign_x>0 ? ((mi.i+1)*unit_cell.x()+boxMin.x()-origin.x())/direction.x() : (mi.i*unit_cell.x()+boxMin.x()-origin.x())/direction.x();
+        mi.t_next_y = mi.sign_y>0 ? ((mi.j+1)*unit_cell.y()+boxMin.y()-origin.y())/direction.y() : (mi.j*unit_cell.y()+boxMin.y()-origin.y())/direction.y();
+        mi.t_next_z = mi.sign_z>0 ? ((mi.k+1)*unit_cell.z()+boxMin.z()-origin.z())/direction.z() : (mi.k*unit_cell.z()+boxMin.z()-origin.z())/direction.z();
+        
         if (index == 0) {
-            mi.t_next_x = outside ? txmin + mi.d_tx : txmax + mi.d_tx;
-            mi.t_next_y = mi.sign_y>0 ? ((mi.j+1)*unit_cell.y()+boxMin.y()-origin.y())/direction.y() : (mi.j*unit_cell.y()+boxMin.y()-origin.y())/direction.y();
-            mi.t_next_z = mi.sign_z>0 ? ((mi.k+1)*unit_cell.z()+boxMin.z()-origin.z())/direction.z() : (mi.k*unit_cell.z()+boxMin.z()-origin.z())/direction.z();
             if (mi.sign_x > 0) {
                 mi.face_index = 1;
                 mi.face_normal = normals[1];
@@ -162,9 +161,6 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const 
             }
         }
         else if (index == 1) {
-            mi.t_next_x = mi.sign_x>0 ? ((mi.i+1)*unit_cell.x()+boxMin.x()-origin.x())/direction.x() : (mi.i*unit_cell.x()+boxMin.x()-origin.x())/direction.x();
-            mi.t_next_y = outside ? tymin + mi.d_ty : tymax + mi.d_ty;
-            mi.t_next_z = mi.sign_z>0 ? ((mi.k+1)*unit_cell.z()+boxMin.z()-origin.z())/direction.z() : (mi.k*unit_cell.z()+boxMin.z()-origin.z())/direction.z();
             if (mi.sign_y > 0) {
                 mi.face_index = 3;
                 mi.face_normal = normals[3];
@@ -175,9 +171,6 @@ void Grid::initializeRayMarch(MarchingInfo &mi, const Ray &r, float tmin) const 
             }
         }
         else {
-            mi.t_next_x = mi.sign_x>0 ? ((mi.i+1)*unit_cell.x()+boxMin.x()-origin.x())/direction.x() : (mi.i*unit_cell.x()+boxMin.x()-origin.x())/direction.x();
-            mi.t_next_y = mi.sign_y>0 ? ((mi.j+1)*unit_cell.y()+boxMin.y()-origin.y())/direction.y() : (mi.j*unit_cell.y()+boxMin.y()-origin.y())/direction.y();
-            mi.t_next_z = outside ? tzmin + mi.d_tz : tzmax + mi.d_tz;
             if (mi.sign_z > 0) {
                 mi.face_index = 5;
                 mi.face_normal = normals[5];
