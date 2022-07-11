@@ -25,13 +25,13 @@ void Group::addObject(int index, Object3D *obj) {
     items[index] = obj;
     
     BoundingBox *obj_box = obj->getBoundingBox();
-    if (box) {
-        if (obj_box) {
+    if (obj_box) {
+        if (box) {
             box->Extend(obj_box);
         }
-    }
-    else {
-        box = new BoundingBox(obj_box->getMin(), obj_box->getMax());
+        else {
+            box = new BoundingBox(obj_box->getMin(), obj_box->getMax());
+        }
     }
 }
 
