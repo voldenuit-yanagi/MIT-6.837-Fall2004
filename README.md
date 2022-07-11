@@ -1,5 +1,4 @@
-# MIT-6.837-Fall2004
-## **6.837 Intro to Computer Graphics**
+# MIT 6.837 Intro to Computer Graphics (Fall2004)
 
 Assignment Page: https://groups.csail.mit.edu/graphics/classes/6.837/F04/assignments/index.html
 
