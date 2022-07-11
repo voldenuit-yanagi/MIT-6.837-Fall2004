@@ -17,6 +17,7 @@ Environment：MacOs + XCode
 
 ### **Assignemnt 3: OpenGL & Phong Shading**
 note1: use of "extern"
+
 note2: in given glCanvas.hpp, glEnable should be after glCreateWindow and glutInit needs to be appended
 
 ### **Assignemnt 4: Shadows, Reflection & Refraction**
@@ -24,6 +25,7 @@ note2: in given glCanvas.hpp, glEnable should be after glCreateWindow and glutIn
 
 ### **Assignemnt 5: Voxel Rendering**
 note1: array initialization
+
 note2: when tnear<tmin, tMin = tmin and calculate t_next_x/y/z using i, j, k
 
 ### **Assignment 6: Grid Acceleration & Solid Textures**
