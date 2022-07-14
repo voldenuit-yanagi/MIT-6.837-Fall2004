@@ -28,3 +28,6 @@ note1: array initialization
 note2: when tnear<tmin, tMin = tmin and calculate t_next_x/y/z using i, j, k
 
 ### **Assignment 6: Grid Acceleration & Solid Textures**
+note1: pass new Transform instead of the original primitive to Grid record
+
+note2: PerspectiveCamera generateRay() is related with the ratio of width and height
