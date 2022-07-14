@@ -2,9 +2,7 @@
 
 bool Triangle::intersect(const Ray &r, Hit &h, float tmin) {
     Vec3f d = r.getDirection();
-    Vec3f temp;
-    Vec3f::Cross3(temp, d, normal);
-    if (temp.Length() == 0) {
+    if (d.Dot3(normal) == 0) {
         return false;
     }
     Vec3f s = r.getOrigin() - p0;

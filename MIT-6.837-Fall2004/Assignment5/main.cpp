@@ -66,9 +66,9 @@ void parseCommand(int argc, char *argv[]) {
             gui = true;
         } else if (!strcmp(argv[i], "-tessellation")) {
             i++; assert(i < argc);
-            theta_steps = atof(argv[i]);
+            theta_steps = atoi(argv[i]);
             i++; assert(i < argc);
-            phi_steps = atof(argv[i]);
+            phi_steps = atoi(argv[i]);
         } else if (!strcmp(argv[i], "-gouraud")) {
             gouraud = true;
         } else if (!strcmp(argv[i], "-shadows")) {
@@ -77,7 +77,7 @@ void parseCommand(int argc, char *argv[]) {
             transparent_shadows = true;
         } else if (!strcmp(argv[i], "-bounces")) {
             i++; assert(i < argc);
-            max_bounces = atof(argv[i]);
+            max_bounces = atoi(argv[i]);
         } else if (!strcmp(argv[i], "-weight")) {
             i++; assert(i < argc);
             cutoff_weight = atof(argv[i]);
