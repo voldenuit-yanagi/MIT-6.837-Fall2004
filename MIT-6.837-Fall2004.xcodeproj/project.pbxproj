@@ -28,6 +28,7 @@
 		3134CF4F2863097900E97843 /* Assignment2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment2; sourceTree = "<group>"; };
 		3134CF502863098600E97843 /* Assignment3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment3; sourceTree = "<group>"; };
 		3134CF512863099000E97843 /* Assignment4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment4; sourceTree = "<group>"; };
+		31CCA3F028881A0500A7A044 /* Assignment8 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment8; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		3134CF3F2863058600E97843 /* MIT-6.837-Fall2004 */ = {
 			isa = PBXGroup;
 			children = (
+				31CCA3F028881A0500A7A044 /* Assignment8 */,
 				3107A7BB28813CA200A05FD3 /* Assignment7 */,
 				3107A725287FB19900A05FD3 /* Assignment6 */,
 				310C52F728743EAA00B4D1E2 /* Assignment5 */,
