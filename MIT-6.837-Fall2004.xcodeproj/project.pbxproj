@@ -23,13 +23,13 @@
 		31339933288E45100005C5B3 /* Assignment5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment5; sourceTree = "<group>"; };
 		31339934288E45100005C5B3 /* Assignment1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment1; sourceTree = "<group>"; };
 		31339935288E45100005C5B3 /* Assignment8 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment8; sourceTree = "<group>"; };
-		31339936288E45120005C5B3 /* Assignment0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment0; sourceTree = "<group>"; };
 		31339937288E45130005C5B3 /* Assignment6 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment6; sourceTree = "<group>"; };
 		31339938288E45140005C5B3 /* Assignment7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment7; sourceTree = "<group>"; };
 		31339939288E45140005C5B3 /* Assignment2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment2; sourceTree = "<group>"; };
 		3133993A288E45140005C5B3 /* Assignment4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment4; sourceTree = "<group>"; };
 		3133993B288E45140005C5B3 /* Assignment9 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment9; sourceTree = "<group>"; };
 		3134CF3D2863058600E97843 /* MIT-6.837-Fall2004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MIT-6.837-Fall2004"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3138FBFD288E47080097741A /* Assignment0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assignment0; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		3134CF3F2863058600E97843 /* MIT-6.837-Fall2004 */ = {
 			isa = PBXGroup;
 			children = (
-				31339936288E45120005C5B3 /* Assignment0 */,
+				3138FBFD288E47080097741A /* Assignment0 */,
 				31339934288E45100005C5B3 /* Assignment1 */,
 				31339939288E45140005C5B3 /* Assignment2 */,
 				31339932288E450F0005C5B3 /* Assignment3 */,
