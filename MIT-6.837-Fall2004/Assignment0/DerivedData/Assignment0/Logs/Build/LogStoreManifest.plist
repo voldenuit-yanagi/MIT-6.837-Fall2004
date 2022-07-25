@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>0E113849-80C2-4791-A98A-D12FA3A950EE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0E113849-80C2-4791-A98A-D12FA3A950EE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675766396.30794001</real>
+			<key>timeStoppedRecording</key>
+			<real>675766396.41462803</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>0E113849-80C2-4791-A98A-D12FA3A950EE</string>
+		</dict>
+		<key>2A47672F-DBA6-4452-A59A-5A1FA29C1FFB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2A47672F-DBA6-4452-A59A-5A1FA29C1FFB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675766399.41844797</real>
+			<key>timeStoppedRecording</key>
+			<real>675766399.51798904</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>2A47672F-DBA6-4452-A59A-5A1FA29C1FFB</string>
+		</dict>
+		<key>802A33B5-4FDA-47AF-A7E4-7B7CA7EE014F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>802A33B5-4FDA-47AF-A7E4-7B7CA7EE014F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675766156.43730497</real>
+			<key>timeStoppedRecording</key>
+			<real>675766156.56904697</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>802A33B5-4FDA-47AF-A7E4-7B7CA7EE014F</string>
+		</dict>
+		<key>B83C8AA1-A8D2-4849-BFB0-1E82DDA3F327</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B83C8AA1-A8D2-4849-BFB0-1E82DDA3F327.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675766096.00876701</real>
+			<key>timeStoppedRecording</key>
+			<real>675766096.17915905</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>B83C8AA1-A8D2-4849-BFB0-1E82DDA3F327</string>
+		</dict>
+		<key>CB1F338E-EBF1-4A1F-8362-E3A2886D9A80</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CB1F338E-EBF1-4A1F-8362-E3A2886D9A80.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675765931.13675702</real>
+			<key>timeStoppedRecording</key>
+			<real>675765933.35820699</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>CB1F338E-EBF1-4A1F-8362-E3A2886D9A80</string>
+		</dict>
+		<key>E006923D-54DB-44E3-AB6D-5A66B0F791BA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E006923D-54DB-44E3-AB6D-5A66B0F791BA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675766398.31763899</real>
+			<key>timeStoppedRecording</key>
+			<real>675766398.40660596</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>E006923D-54DB-44E3-AB6D-5A66B0F791BA</string>
+		</dict>
+		<key>E37573D0-8746-4B1F-A499-3607E2983063</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E37573D0-8746-4B1F-A499-3607E2983063.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assignment0 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assignment0</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Assignment0</string>
+			<key>timeStartedRecording</key>
+			<real>675767723.46149004</real>
+			<key>timeStoppedRecording</key>
+			<real>675767724.84698296</real>
+			<key>title</key>
+			<string>Build Assignment0</string>
+			<key>uniqueIdentifier</key>
+			<string>E37573D0-8746-4B1F-A499-3607E2983063</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
