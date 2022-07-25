@@ -2,7 +2,7 @@
 
 Assignment Page: https://groups.csail.mit.edu/graphics/classes/6.837/F04/assignments/index.html
 
-Environment：MacOs + XCode
+Environment：MacOS + XCode
 
 
 ### **Assignemnt 0: Iterated Function Systems**
